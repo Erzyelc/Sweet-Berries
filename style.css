@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1500px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 220px 400px 500px 450px 85px;
+}
+
+header{
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#menuchk {
+  display: none;
+}
+
+.burger{
+  display: none;
+}
+
+header img{
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #FF4C4C;
+    text-decoration: none;
+    font-size: 28px;
+    margin: 10px;
+}
+
+button{
+    background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
+    border: none;
+    border-radius: 28px;
+    height: 56px;
+    width: 167px;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin-right: 80px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.banner{
+    display: flex;
+    grid-column: span 3;
+    justify-content: space-around;
+}
+
+.banner h1{
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.banner p{
+    color: #83869A;
+}
+
+.banner-heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
+   
+}
+
+.banner img{
+    border-radius: 39px;
+    width: 50%;
+}
+
+
+main{
+    grid-column: span 3;
+    grid-row: span 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main h3{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+main p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #83869A;
+    line-height: 28px;
+}
+
+main a{
+    text-decoration: none;
+    color: #FF4C4C;
+}
+
+
+.card{
+    width: 25%;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 322px;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0px 25px 50px 0px #06168D0B;
+}
+
+.card h3{
+    padding-top: 15px;
+}
+
+.card img {
+    position: absolute;
+    bottom: 300px;
+    left: 5px;
+    background-image: none;
+}
+
+.title-card{
+    background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 45px;
+}
+
+.mobile-title-card{
+    background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 45px;
+    display: none;
+}
+
+footer{
+    background: #FF4C4C;
+    grid-column: span 3;
+    color: white;
+}
+
+footer h2{
+    font-weight: 700;
+    font-size: 28px;
+    padding: 25px 25px 25px 35px;
+}
+
+/*tablet size*/
+@media(max-width: 960px){
+
+    body{
+        width: 50%;
+    }
+
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 220px 500px  200px 1fr 1fr 1fr 85px;
+    }
+
+    header{
+        grid-row: span 1;
+        grid-column: span 2;
+        margin-bottom: 10px;
+    }
+
+    button{
+        margin-right: 30px;
+    }
+    
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .banner-heading{
+        padding: 55px;
+    }
+
+    .banner img{
+        width: 80%;
+    }
+
+    main{
+        margin-top: 150px;
+        margin-bottom: 80px;
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+
+
+    .card{
+        width: 45%;
+        margin-bottom: 50px;
+    }
+
+    .card img{
+        width: 12%;
+    }
+    
+    .small{
+        display: none;
+    }
+
+    footer{
+        grid-column: span 2;
+    }
+
+}
+
+/*Mobile Size*/
+@media(max-width: 601px){
+
+    header{
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    header img{
+        width: 150px;
+        height: 150px;
+        margin: 0;
+    }
+
+    header nav{
+        display: none;
+    }
+    
+    .banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+
+   .banner h1{
+       font-size: 30px;
+   }
+
+    main{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 2000px;
+        margin-bottom: 0;
+    }
+
+    .card{
+        width: 90%;
+        height: 322px;
+        margin-bottom: 20px;
+    }
+
+    .title-card{
+        display: none;
+    }
+
+    .mobile-title-card{
+        display: inherit;
+        height: 161px;
+        font-size: 14px;
+    }
+  
+    .burger{
+        display: block;
+        margin-right: 50px;
+        color: #FF4C4C;
+        font-size: 50px;
+    }
+    
+}

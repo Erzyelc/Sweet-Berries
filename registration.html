@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <form class="form">
+            <input type="text" placeholder="Username" class="form__input" />
+                
+            <input type="text" placeholder="Lastname" class="form__input" />
+            
+            <input type="email" placeholder="Email" class="form__input" />
     
+            <input type="password" placeholder="Password" class="form__input" />
+    
+                
+            <input list="courses" name="course">
+                <datalist id="courses">
+                    <option value="Cooking Essentials"></option>
+                    <option value="Chef Skills"></option>
+                    <option value="Nutrition in Cooking"></option>
+                    <option value="Plant-Based Cooking"></option>
+                    <option value="Teen's Kitchen"></option>
+                </datalist>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
 </body>
 </html>

@@ -264,10 +264,11 @@ footer h2{
         justify-content: center;
         align-items: center;
         height: 500px;
+        margin-top: 90px;
     }
 
    .banner h1{
-       font-size: 30px;
+       font-size: 40px;
    }
 
     main{
@@ -300,6 +301,29 @@ footer h2{
         margin-right: 50px;
         color: #FF4C4C;
         font-size: 50px;
+    }
+
+    #menuchk:checked + nav{
+        position: absolute;
+        top: 150px;
+        right: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+    }
+    
+    button{
+        background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
+        border: none;
+        border-radius: 28px;
+        height: 45px;
+        width: 150px;
+        font-size: 15px;
+        color: white;
+        font-weight: 700;
+        margin: 0;
+        cursor: pointer;
     }
     
 }

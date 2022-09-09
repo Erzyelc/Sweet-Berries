@@ -6,9 +6,51 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background: #FF4C4C;
+    background: #fff;
     
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuchk {
+    display: none;
+  }
+
+.burger{
+    display: none;
+}
+  
+  header img{
+      width: 100px;
+      height: 100px;
+      margin-left: 10px;
+      margin-top: 10px;
+  }
+  
+  nav a {
+      color: #FF4C4C;
+      text-decoration: none;
+      font-size: 23px;
+      margin: 10px;
+  }
+  
+  button{
+      background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
+      border: none;
+      border-radius: 28px;
+      height: 45px;
+      width: 150px;
+      font-size: 15px;
+      color: white;
+      font-weight: 700;
+      margin-right: 80px;
+      margin-left: 20px;
+      cursor: pointer;
+  }
 
 .container{
     display: flex;
@@ -17,37 +59,89 @@ body{
 }
 
 .form{
-    margin-top: 150px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
 
 input{
     margin-bottom: 20px;
     padding-bottom: 20px;
+    border: 1px solid #FF4C4C;
+    border-radius: 10px;
 }
 
 input::placeholder{
     color: #FF4C4C;
+    opacity: 50%;
+    font-weight: 600;
+    text-align: center;
 }
 
 .form-btns{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 input[type=submit]{
+    width: 48%;
     color: white;
     font-weight: 700;
     background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 28px;
     border: none;
 }
 
 input[type=reset]{
+    width: 48%;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 28px;
     border: none;
     font-weight: 700;
+    background-color: #FF4C4C;
+    color: white;
+}
+
+@media(max-width: 600px){
+
+    header nav{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+        margin-right: 50px;
+        color: #FF4C4C;
+        font-size: 40px;
+    }
+
+    #menuchk:checked + nav{
+        position: absolute;
+        top: 80px;
+        right: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    button{
+        background: linear-gradient(180deg, #FF4C4C 0%, #A94E97 100%);
+        border: none;
+        border-radius: 28px;
+        height: 45px;
+        width: 150px;
+        font-size: 15px;
+        color: white;
+        font-weight: 700;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .form{
+        margin-top: 160px;
+    }
 }

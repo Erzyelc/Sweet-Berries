@@ -74,7 +74,7 @@ input{
 }
 
 input::placeholder{
-    color: #FF4C4C;
+    color: #000;
     opacity: 50%;
     font-weight: 600;
     text-align: center;
